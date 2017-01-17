@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GameExample</title>
+    <link rel="stylesheet" type="text/css" href="game-layout.css"/>
+    <script src="LAB.min.js"></script>
+    <script>
+
+            var powerupjsdir = 'powerupjs/';
+
+            $LAB
+                    .script(powerupjsdir + 'Math.js').wait()
+                    .script(powerupjsdir + 'IGameLoopObject.js').wait()
+                    .script(powerupjsdir + 'geom/Vector2.js').wait()
+                    .script(powerupjsdir + 'geom/Rectangle.js').wait()
+                    .script(powerupjsdir + 'Canvas2D.js').wait()
+                    .script(powerupjsdir + 'system/Color.js').wait()
+                    .script(powerupjsdir + 'system/Keys.js').wait()
+                    .script(powerupjsdir + 'input/ButtonState.js').wait()
+                    .script(powerupjsdir + 'input/Keyboard.js').wait()
+                    .script(powerupjsdir + 'input/Mouse.js').wait()
+                    .script(powerupjsdir + 'input/Touch.js').wait()
+                    .script(powerupjsdir + 'SpriteSheet.js').wait()
+                    .script(powerupjsdir + 'Sound.js').wait()
+                    .script(powerupjsdir + 'Animation.js').wait()
+                    .script(powerupjsdir + 'gameobjects/GameObject.js').wait()
+                    .script(powerupjsdir + 'gameobjects/GameObjectList.js').wait()
+                    .script(powerupjsdir + 'gameobjects/GameObjectGrid.js').wait()
+                    .script(powerupjsdir + 'gameobjects/SpriteGameObject.js').wait()
+                    .script(powerupjsdir + 'gameobjects/AnimatedGameObject.js').wait()
+                    .script(powerupjsdir + 'gui/Button.js').wait()
+                    .script(powerupjsdir + 'gui/Label.js').wait()
+                    .script(powerupjsdir + 'GameStateManager.js').wait()
+                    .script(powerupjsdir + 'Game.js').wait()
+
+                    .script('elements/Background.js').wait()
+                    .script('elements/Clouds.js').wait()
+                    .script('elements/Player.js').wait()
+                    .script('elements/Obstacles.js').wait()                    
+
+                    .script('gamestates/PlayingState.js').wait()
+                    .script('gamestates/TitleState.js').wait()
+                    .script('gamestates/GameOverState.js').wait()
+                    .script('app.js').wait(function() {
+                        console.log("Starting game");
+                        powerupjs.Game.start('gameArea', 'mycanvas', 384, 600);
+                    });
+/*
+        $LAB
+                .script('tools/Vector2.js').wait()
+                .script('tools/Rectangle.js').wait()
+                .script('tools/ButtonState.js').wait()
+                .script('tools/Keyboard.js').wait()
+                .script('tools/Mouse.js').wait()
+                .script('tools/Canvas2D.js').wait()
+                .script('tools/Color.js').wait()
+                .script('tools/Keys.js').wait()
+                .script('tools/Sound.js').wait()
+                .script('tools/Game.js').wait()
+                .script('tools/GameStateManager.js')
+
+                .script('PlayingState.js').wait()
+                .script('TitleState.js').wait()
+                .script('GameOverState.js').wait()
+                .script('GameExample.js').wait(function () {
+                    Game.start('mycanvas', 380, 600);
+                });
+*/
+
+    </script>
+</head>
+<body>
+<div id="gameArea">
+    <canvas id="mycanvas" width="380" height="600"></canvas>
+</div>
+</body>
+</html>
